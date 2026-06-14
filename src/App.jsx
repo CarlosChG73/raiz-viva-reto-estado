@@ -4,6 +4,9 @@ import { useState } from "react";
 // Importa los estilos
 import "./App.css";
 
+// Ruta base para que las imágenes funcionen en local y en GitHub Pages
+const rutaBase = import.meta.env.BASE_URL;
+
 // Datos de los productos
 const productos = [
   {
@@ -11,7 +14,7 @@ const productos = [
     nombre: "Papa",
     descripcion:
       "Papa fresca de huerto, ideal para guisos, sopas y platillos caseros.",
-    imagen: "/images/papa.png",
+    imagen: `${rutaBase}images/papa.png`,
     enlace:
       "https://www.gob.mx/agricultura/articulos/la-papa-un-alimento-con-historia-y-cultura",
   },
@@ -20,7 +23,7 @@ const productos = [
     nombre: "Jitomate",
     descripcion:
       "Jitomate fresco, de gran sabor y muy utilizado en la cocina mexicana.",
-    imagen: "/images/jitomate.png",
+    imagen: `${rutaBase}images/jitomate.png`,
     enlace:
       "https://www.gob.mx/agricultura/articulos/el-jitomate-hortaliza-mexicana-de-importancia-mundial?idiom=es",
   },
@@ -29,7 +32,7 @@ const productos = [
     nombre: "Cebolla",
     descripcion:
       "Cebolla natural, perfecta para dar sabor y aroma a tus alimentos.",
-    imagen: "/images/cebolla.png",
+    imagen: `${rutaBase}images/cebolla.png`,
     enlace:
       "https://www.gob.mx/agricultura/articulos/cebolla-capas-de-sabor-y-textura?idiom=es",
   },
@@ -38,7 +41,7 @@ const productos = [
     nombre: "Ajos",
     descripcion:
       "Ajo fresco con aroma intenso, ideal para cocinar platillos tradicionales.",
-    imagen: "/images/ajos.png",
+    imagen: `${rutaBase}images/ajos.png`,
     enlace:
       "https://www.gob.mx/agricultura/prensa/se-ubica-mexico-como-el-noveno-exportador-mundial-de-ajos?idiom=es",
   },
@@ -47,7 +50,7 @@ const productos = [
     nombre: "Chile",
     descripcion:
       "Chile fresco, producto agrícola con identidad cultural y gastronómica.",
-    imagen: "/images/chile.png",
+    imagen: `${rutaBase}images/chile.png`,
     enlace:
       "https://www.gob.mx/agricultura/articulos/chile-un-producto-agricola-con-identidad-cultural-y-gastronomica?idiom=es",
   },
@@ -56,7 +59,7 @@ const productos = [
     nombre: "Zanahoria",
     descripcion:
       "Zanahoria fresca, crujiente y nutritiva para comidas saludables.",
-    imagen: "/images/zanahoria.png",
+    imagen: `${rutaBase}images/zanahoria.png`,
     enlace: "https://www.gob.mx/agricultura/articulos/zanahoria-una-joya-mundial",
   },
 ];
@@ -140,7 +143,7 @@ function App() {
           <div className="hero-imagen-contenedor">
             <img
               className="hero-imagen"
-              src="/images/portada.png"
+              src={`${rutaBase}images/portada.png`}
               alt="Productores con verduras frescas"
             />
           </div>
